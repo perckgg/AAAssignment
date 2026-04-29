@@ -1,0 +1,24 @@
+Tại sao mô hình chưa đạt điểm mong muốn?
+A. Cái bẫy của hệ số SHRINK = 0.10Việc nhân toàn bộ dự báo với 0.10 là một con dao hai lưỡi.Điểm lợi: Nó ép các giá trị dự báo về rất gần 0, giúp bạn dễ dàng đạt được tiêu chí abs < 0.005 (vì bản chất tỷ suất sinh lời hàng ngày của cổ phiếu cũng xoay quanh mức 0).Điểm hại: Nó "bóp nghẹt" phương sai (variance) của tín hiệu. Khi tín hiệu dự báo bị thu nhỏ quá mức, mô hình của bạn gần như dự báo một đường thẳng tiệm cận 0. Điều này khiến điểm rel (chỉ số đo lường hiệu suất tương đối) bị âm hoặc rất thấp, vì mô hình không còn khả năng bắt được sự dao động lên/xuống thực sự của thị trường.B. Sử dụng "Expanding Window" thay vì "Rolling Window"Trong vòng lặp huấn luyện: Xtr = feats[:i]. Khi $i$ tiến đến hàng ngàn, mô hình của bạn đang dùng dữ liệu của rất nhiều năm về trước để dự báo cho ngày mai.Thị trường chứng khoán luôn thay đổi các "chế độ" (Regime Shifts). Những gì đúng vào 5 năm trước có thể hoàn toàn sai ở hiện tại. Việc cho dữ liệu cũ có trọng số ngang bằng với dữ liệu mới sẽ làm "nhiễu" trọng số beta.C. Hạn chế của Linear Ridge RegressionRidge Regression giả định mối quan hệ giữa các Feature (RSI, MACD, MA...) và Return là mối quan hệ tuyến tính. Trong khi đó, thị trường tài chính mang tính phi tuyến tính rất cao. Ví dụ: RSI tăng từ 30 lên 40 có ý nghĩa hoàn toàn khác với RSI tăng từ 70 lên 80, nhưng hồi quy tuyến tính sẽ đối xử với 2 độ lệch này tương tự nhau.D. Cách chuẩn hóa dữ liệu mu và sdBạn đang tính mu và sd trên toàn bộ lịch sử feats[:i]. Nếu thị trường vừa trải qua một đợt khủng hoảng với độ biến động (volatility) khổng lồ, sd sẽ bị phình to. Khi áp dụng sd này để chuẩn hóa cho thời kỳ bình thường, các features mới sẽ bị ép xuống thành các giá trị quá nhỏ, làm mất tín hiệu.
+
+2. Các hướng cải thiện (Actionable Improvements)
+Để tăng điểm rel mà vẫn giữ được abs ở mức tốt, bạn có thể thử nghiệm các thay đổi sau vào template hiện tại:
+
+Cải tiến 1: Chuyển sang Rolling Window (Cửa sổ trượt)
+Thay vì huấn luyện trên toàn bộ lịch sử, hãy chỉ huấn luyện trên một khoảng thời gian gần nhất (ví dụ: 1 năm ~ 252 ngày giao dịch).
+Cải tiến 2: Tinh chỉnh hàm Shrinkage và Clipping linh hoạt
+Thay vì hard-code SHRINK = 0.10, hãy để mô hình tự quyết định hoặc sử dụng Volatility Scaling.
+
+Bỏ SHRINK tĩnh đi.
+
+Chuẩn hóa output dự báo dựa trên độ biến động hiện tại của thị trường. Nếu thị trường đang bình lặng, dự báo biên độ nhỏ; nếu thị trường dao động mạnh, cho phép dự báo biên độ lớn hơn (nhưng vẫn nằm trong CLIP).
+Cải tiến 3: Thay đổi mô hình học máy (Gradient Boosting)
+Vì bạn có sẵn hàm trích xuất 18 features rất tốt, hãy thay thế khối Ridge Regression bằng các mô hình dạng cây phi tuyến tính như LightGBM hoặc XGBoost.
+Các mô hình này xử lý Outliers cực tốt, tự động tương tác các features với nhau (ví dụ: tự hiểu mối quan hệ kết hợp giữa MACD và RSI) và không cần bạn phải tính mu, sd thủ công.
+
+Gợi ý cấu hình an toàn cho tài chính: Cây rất nông (max_depth=3), learning rate nhỏ (0.01), và dùng L1 loss (Mean Absolute Error) làm hàm mục tiêu thay vì L2 loss (MSE) để tránh mô hình bị thiên lệch bởi các ngày giá cổ phiếu tăng/giảm sốc.
+Cải tiến 4: Xử lý Outlier trên Target (ytr)
+Hồi quy tuyến tính (dùng ma trận giả nghịch đảo Xs.T @ Xs) giải quyết bài toán bình phương tối thiểu (MSE). Nghĩa là 1 ngày cổ phiếu giảm 10% sẽ tác động đến hàm Loss bằng 100 ngày cổ phiếu giảm 1%.
+
+Khắc phục: Trước khi đưa ytr vào huấn luyện, hãy gọt (clip) hoặc biến đổi target:
+ytr = np.clip(ytr, -0.05, 0.05) (Cắt bỏ các return vượt quá 5%). Điều này giúp trọng số beta ổn định hơn rất nhiều.
