@@ -1,0 +1,354 @@
+[
+  {
+    "address": "259 oàn Hoàng Minh, Sơn Đông, Vĩnh Long",
+    "result": {
+      "province": "Vĩnh Long",
+      "ward": "Sơn Đông",
+      "street": "Đoàn Hoàng Minh"
+    }
+  },
+  {
+    "address": "ặng Dung, Đồng Sơn, Quảng Trị",
+    "result": {
+      "province": "Quảng Trị",
+      "ward": "Đồng Sơn",
+      "street": "Đặng Dung"
+    }
+  },
+  {
+    "address": "150 guyễn Trãi, P.Hà Nam, Ninh Bình",
+    "result": {
+      "province": "Ninh Bình",
+      "ward": "Hà Nam",
+      "street": "Nguyễn Trãi"
+    }
+  },
+  {
+    "address": "88 ùi Thị Xuân, Phường Tân Phong, T Lai Châu",
+    "result": {
+      "province": "Lai Châu",
+      "ward": "Tân Phong",
+      "street": "Bùi Thị Xuân"
+    }
+  },
+  {
+    "address": "397 Nguyễn Khánh Toàn, PhườngHòa Cường, TP Đà Nẵng",
+    "result": {
+      "province": "Đà Nẵng",
+      "ward": "Hòa Cường",
+      "street": "Nguyễn Khánh Toàn"
+    }
+  },
+  {
+    "address": "388 Nguyễn Minh Vân, PhườngHòa Khánh, Đà Nẵng",
+    "result": {
+      "province": "Đà Nẵng",
+      "ward": "Hòa Khánh",
+      "street": "Nguyễn Minh Vân"
+    }
+  },
+  {
+    "address": "53/127 Đường Nguyễn Văn Cừ, PBồ Đề, TPHà Nội",
+    "result": {
+      "province": "Hà Nội",
+      "ward": "Bồ Đề",
+      "street": "Nguyễn Văn Cừ"
+    }
+  },
+  {
+    "address": "43 Nguyễn Thiện Kế, An Hải, TPĐà Nẵng",
+    "result": {
+      "province": "Đà Nẵng",
+      "ward": "An Hải",
+      "street": "Nguyễn Thiện Kế"
+    }
+  },
+  {
+    "address": "191 Hùng Vương, P.Bắc Kạn, T.Thái Nguyên",
+    "result": {
+      "province": "Thái Nguyên",
+      "ward": "Bắc Kạn",
+      "street": "Hùng Vương"
+    }
+  },
+  {
+    "address": "63 Nguyễn Chí Thanh, Phường Tân Phong, T Lai Châu",
+    "result": {
+      "province": "Lai Châu",
+      "ward": "Tân Phong",
+      "street": "Nguyễn Chí Thanh"
+    }
+  },
+  {
+    "address": "289 Nguyễn Thông, P. Phú Thuỷ, T. Lâm Đồng",
+    "result": {
+      "province": "Lâm Đồng",
+      "ward": "Phú Thuỷ",
+      "street": "Nguyễn Thông"
+    }
+  },
+  {
+    "address": "265 Trương Định, P. Phú Lợi, Thành phố Hồ Chí Minh",
+    "result": {
+      "province": "Hồ Chí Minh",
+      "ward": "Phú Lợi",
+      "street": "Trương Định"
+    }
+  },
+  {
+    "address": "111/138/98 Nguyễn Đức Cảnh, Thành Vinh, Nghệ An",
+    "result": {
+      "province": "Nghệ An",
+      "ward": "Thành Vinh",
+      "street": "Nguyễn Đức Cảnh"
+    }
+  },
+  {
+    "address": "68/61/135/89 Phố Nguyễn Sơn, P. Bồ Đề, TP.Hà Nội",
+    "result": {
+      "province": "Hà Nội",
+      "ward": "Bồ Đề",
+      "street": "Nguyễn Sơn"
+    }
+  },
+  {
+    "address": "79/85/144 Phố Đặng Vũ Hỷ, Phường Việt Hưng, TP Hà Nội",
+    "result": {
+      "province": "Hà Nội",
+      "ward": "Việt Hưng",
+      "street": "Đặng Vũ Hỷ"
+    }
+  },
+  {
+    "address": "93/66/52/117 Đường Ngô Gia Tự, P Việt Hưng, TP. Hà Nội",
+    "result": {
+      "province": "Hà Nội",
+      "ward": "Việt Hưng",
+      "street": "Ngô Gia Tự"
+    }
+  },
+  {
+    "address": "Đường số 8, Phường Hải Châu, Thành phố Đà Nẵng",
+    "result": {
+      "province": "Đà Nẵng",
+      "ward": "Hải Châu",
+      "street": "Số 8"
+    }
+  },
+  {
+    "address": "Đường số 95, Phường Bình Dương, Thành phố Hồ Chí Minh",
+    "result": {
+      "province": "Hồ Chí Minh",
+      "ward": "Bình Dương",
+      "street": "Số 95"
+    }
+  },
+  {
+    "address": "439 Số 6, An Hải, TP.Đà Nẵng",
+    "result": {
+      "province": "Đà Nẵng",
+      "ward": "An Hải",
+      "street": "Số 6"
+    }
+  },
+  {
+    "address": "269 số 39, P Bình Dương, TP.Hồ Chí Minh",
+    "result": {
+      "province": "Hồ Chí Minh",
+      "ward": "Bình Dương",
+      "street": "Số 39"
+    }
+  },
+  {
+    "address": "Nguyễn Thị Năm, Phường Bạc Liêu, Tỉnh Cà Mau",
+    "result": {
+      "province": "Cà Mau",
+      "ward": "Bạc Liêu",
+      "street": "Nguyễn Thị Năm"
+    }
+  },
+  {
+    "address": "Tây Sơn, Phường Hạc Thành, Tỉnh Thanh Hóa",
+    "result": {
+      "province": "Thanh Hóa",
+      "ward": "Hạc Thành",
+      "street": "Tây Sơn"
+    }
+  },
+  {
+    "address": "Ngô Sĩ Liên, Phường Phan Thiết, Tỉnh Lâm Đồng",
+    "result": {
+      "province": "Lâm Đồng",
+      "ward": "Phan Thiết",
+      "street": "Ngô Sĩ Liên"
+    }
+  },
+  {
+    "address": "Đinh Lễ, Phường Đồng Hới, Tỉnh Quảng Trị",
+    "result": {
+      "province": "Quảng Trị",
+      "ward": "Đồng Hới",
+      "street": "Đinh Lễ"
+    }
+  },
+  {
+    "address": "408 Cao Thắng, P.Ninh Kiều, Cần Thơ",
+    "result": {
+      "province": "Cần Thơ",
+      "ward": "Ninh Kiều",
+      "street": "Cao Thắng"
+    }
+  },
+  {
+    "address": " 308 Phạm Hồng Thái, P.Phố Hiến,  Hưng Yên",
+    "result": {
+      "province": "Hưng Yên",
+      "ward": "Phố Hiến",
+      "street": "Phạm Hồng Thái"
+    }
+  },
+  {
+    "address": "154 Phùng Chí Kiên, P.Bãi Cháy, Quảng Ninh",
+    "result": {
+      "province": "Quảng Ninh",
+      "ward": "Bãi Cháy",
+      "street": "Phùng Chí Kiên"
+    }
+  },
+  {
+    "address": "Ngõ 76 Phố Yên Phụ, Phường Tây Hồ, Thành phố Hà Nội",
+    "result": {
+      "province": "Hà Nội",
+      "ward": "Tây Hồ",
+      "street": "Yên Phụ"
+    }
+  },
+  {
+    "address": "Hẻm 50 Quang Trung, Phường Ninh Kiều, Thành phố Cần Thơ",
+    "result": {
+      "province": "Cần Thơ",
+      "ward": "Ninh Kiều",
+      "street": "Quang Trung"
+    }
+  },
+  {
+    "address": "Hẻm 103/4/2A Đường Lý Sơn, Phường Bồ Đề, Thành phố Hà Nội",
+    "result": {
+      "province": "Hà Nội",
+      "ward": "Bồ Đề",
+      "street": "Lý Sơn"
+    }
+  },
+  {
+    "address": "Ngõ 5 Phố Bùi Thiện Ngô, Phường Việt Hưng, Thành phố Hà Nội",
+    "result": {
+      "province": "Hà Nội",
+      "ward": "Việt Hưng",
+      "street": "Bùi Thiện Ngô"
+    }
+  },
+  {
+    "address": "Đường B5, Phường Nam Nha Trang, Tỉnh Khánh Hòa",
+    "result": {
+      "province": "Khánh Hòa",
+      "ward": "Nam Nha Trang",
+      "street": "B5"
+    }
+  },
+  {
+    "address": "Đường 12, Phường Bình Dương, Thành phố Hồ Chí Minh",
+    "result": {
+      "province": "Hồ Chí Minh",
+      "ward": "Bình Dương",
+      "street": "12"
+    }
+  },
+  {
+    "address": "79 Quốc lộ 4D, Phường Lào Cai, Lào Cai",
+    "result": {
+      "province": "Lào Cai",
+      "ward": "Lào Cai",
+      "street": "Quốc Lộ 4D"
+    }
+  },
+  {
+    "address": "129/79 Đường Hồng Hà, P. Hồng Hà, Thành phố Hà Nội",
+    "result": {
+      "province": "Hà Nội",
+      "ward": "Hồng Hà",
+      "street": "Hồng Hà"
+    }
+  },
+  {
+    "address": "Phố Lê Khôi, Phường Lào Cai, Tỉnh Lào Cai",
+    "result": {
+      "province": "Lào Cai",
+      "ward": "Lào Cai",
+      "street": "Lê Khôi"
+    }
+  },
+  {
+    "address": "53 Trần Quốc Toản, P. Phủ Lý,  Ninh Bình",
+    "result": {
+      "province": "Ninh Bình",
+      "ward": "Phủ Lý",
+      "street": "Trần Quốc Toản"
+    }
+  },
+  {
+    "address": "221 Phặc Tràng, Phong Quang, Thái Nguyên",
+    "result": {
+      "province": "Thái Nguyên",
+      "ward": "Phong Quang",
+      "street": "Phặc Tràng"
+    }
+  },
+  {
+    "address": "11 Cách Mạng Tháng 8, P. Cẩm Lệ, Thành phố Đà Nẵng",
+    "result": {
+      "province": "Đà Nẵng",
+      "ward": "Cẩm Lệ",
+      "street": "Cách Mạng Tháng 8"
+    }
+  },
+  {
+    "address": "Đường 2 Tháng 9, Phường Hải Châu, Thành phố Đà Nẵng",
+    "result": {
+      "province": "Đà Nẵng",
+      "ward": "Hải Châu",
+      "street": "2 Tháng 9"
+    }
+  },
+  {
+    "address": "Đường 3 Tháng 2, Phường Ninh Kiều, Thành phố Cần Thơ",
+    "result": {
+      "province": "Cần Thơ",
+      "ward": "Ninh Kiều",
+      "street": "3 Tháng 2"
+    }
+  },
+  {
+    "address": "Ba Mươi Tháng Tư, Phường Ninh Kiều, Thành phố Cần Thơ",
+    "result": {
+      "province": "Cần Thơ",
+      "ward": "Ninh Kiều",
+      "street": "Ba Mươi Tháng Tư"
+    }
+  },
+  {
+    "address": "Đường An Dương Vương, Phường Ba Đình, Thành phố Hà Nội",
+    "result": {
+      "province": "Hà Nội",
+      "ward": "Ba Đình",
+      "street": "An Dương Vương"
+    }
+  },
+  {
+    "address": "An Ninh, Phường Thủy Xuân, Thành phố Huế",
+    "result": {
+      "province": "Huế",
+      "ward": "Thủy Xuân",
+      "street": "An Ninh"
+    }
+  }
+]
